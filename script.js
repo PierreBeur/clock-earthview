@@ -6,3 +6,13 @@ fetch('images.json')
     document.querySelector('img').src = `https://www.gstatic.com/prettyearth/assets/full/${id}.jpg`
   })
   .catch(error => console.error(error));
+
+const clock = document.querySelector('#clock');
+
+function updateTime() {
+  clock.textContent = (new Date()).toLocaleTimeString();
+}
+
+updateTime();
+
+setInterval(updateTime, 1000);
