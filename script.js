@@ -10,7 +10,11 @@ fetch('images.json')
 const clock = document.querySelector('#clock');
 
 function updateTime() {
-  clock.textContent = (new Date()).toLocaleTimeString();
+  clock.textContent = (new Date()).toLocaleTimeString([], {
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit'
+  });
 }
 
 updateTime();
