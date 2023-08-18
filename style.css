@@ -21,7 +21,7 @@ img {
   top: 0;
   left: 0;
   object-fit: cover;
-  animation: fadein 0.5s;
+  opacity: 0;
 }
 
 body, #clock {
@@ -38,14 +38,4 @@ body, #clock {
 
 #date {
   font-size: 0.6rem;
-}
-
-@keyframes fadein {
-  0% {
-      opacity: 0
-  }
-
-  to {
-      opacity: 1
-  }
 }

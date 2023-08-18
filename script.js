@@ -1,9 +1,20 @@
+// Fade in img on load
+const img = document.querySelector('img');
+img.addEventListener('load', () => {
+  img.animate([
+    { opacity: 0 },
+    { opacity: 1 }
+  ], 500);
+  img.style.opacity = 1;
+});
+
+// Set img source
 fetch('images.json')
   .then(response => response.json())
   .then(data => {
     const index = Math.floor(Math.random() * data.length);
     const id = data[index];
-    document.querySelector('img').src = `https://www.gstatic.com/prettyearth/assets/full/${id}.jpg`
+    img.src = `https://www.gstatic.com/prettyearth/assets/full/${id}.jpg`
   })
   .catch(error => console.error(error));
 
