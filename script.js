@@ -1,5 +1,5 @@
 // Fade in img on load
-const img = document.querySelector('img');
+const img = document.querySelector('#background');
 img.addEventListener('load', () => {
   img.animate([
     { opacity: 0 },
