@@ -14,7 +14,7 @@ fetch('images.json')
   .then(data => {
     const index = Math.floor(Math.random() * data.length);
     const id = data[index];
-    img.src = `https://www.gstatic.com/prettyearth/assets/full/${id}.jpg`
+    img.src = `https://www.gstatic.com/prettyearth/assets/full/${id}.jpg`;
   })
   .catch(error => console.error(error));
 
