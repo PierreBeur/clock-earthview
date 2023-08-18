@@ -15,6 +15,8 @@ fetch('images.json')
     const index = Math.floor(Math.random() * data.length);
     const id = data[index];
     img.src = `https://www.gstatic.com/prettyearth/assets/full/${id}.jpg`;
+    document.querySelector('#download').href = img.src;
+    document.querySelector('#source').href = 'https://g.co/ev/' + id;
   })
   .catch(error => console.error(error));
 
