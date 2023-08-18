@@ -24,14 +24,14 @@ img {
   animation: fadein 0.5s;
 }
 
-#clock {
+body, #clock {
   display: flex;
-  width: 100%;
-  height: 100%;
-  position: absolute;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+#clock {
   filter: drop-shadow(0 0 1.5px black) drop-shadow(0 0 30px black);
   user-select: none;
 }
