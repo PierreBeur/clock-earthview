@@ -33,6 +33,7 @@ img {
   align-items: center;
   justify-content: center;
   filter: drop-shadow(0 0 1.5px black) drop-shadow(0 0 30px black);
+  user-select: none;
 }
 
 #date {
