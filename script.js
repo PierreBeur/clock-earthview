@@ -39,7 +39,7 @@ function updateDate() {
   const weekday = d.toLocaleDateString([], {weekday: 'short'}).toUpperCase();
   const day = d.toLocaleDateString([], {day: '2-digit'});
   const month = d.toLocaleDateString([], {month: 'short'}).toUpperCase();
-  date.textContent = weekday + ' ' + day + ' ' + month;
+  date.textContent = `${weekday} ${day} ${month}`;
 }
 updateDate();
 setInterval(updateDate, 1000);
