@@ -43,3 +43,23 @@ function updateDate() {
 }
 updateDate();
 setInterval(updateDate, 1000);
+
+// Fullscreen
+const fullscreen = document.querySelector('#fullscreen');
+const fullscreenSpan = fullscreen.querySelector('span');
+function updateFullscreenSpan() {
+  if (document.fullscreenElement) {
+    fullscreenSpan.textContent = 'fullscreen_exit';
+  } else {
+    fullscreenSpan.textContent = 'fullscreen';
+  }
+}
+updateFullscreenSpan();
+document.addEventListener('fullscreenchange', updateFullscreenSpan);
+fullscreen.addEventListener('click', () => {
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen();
+  } else if (document.exitFullscreen) {
+    document.exitFullscreen();
+  }
+});
