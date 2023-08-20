@@ -1,11 +1,12 @@
 // Fade in img on load
+const opacityMax = 1;
 const img = document.querySelector('#background');
 img.addEventListener('load', () => {
   img.animate([
     { opacity: 0 },
-    { opacity: 1 }
+    { opacity: opacityMax }
   ], 500);
-  img.style.opacity = 1;
+  img.style.opacity = opacityMax;
 });
 
 // Set img source
