@@ -16,37 +16,39 @@
   font-display: block;
 }
 
-html, body {
+body {
   margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
   background: black;
 }
 
-#background {
-  width: 100%;
-  height: 100%;
+.fullscreen {
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#background {
   object-fit: cover;
   opacity: 0;
 }
 
-body, #clock {
+#clock {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 nav {
+  position: absolute;
   width: 100%;
+  padding: 0.2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.2rem;
   gap: 0.2rem;
   font-size: 0.3rem;
 }
